@@ -60,7 +60,7 @@ console.log(same([1, 2, 3], [4, 1, 9]));
 console.log(same([1, 2, 3, 2, 5], [9, 1, 4, 4, 11]));
 
 // O(n)
-function same1(arr1, arr2) {
+function same2(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
   }
@@ -83,5 +83,5 @@ function same1(arr1, arr2) {
   return true;
 }
 
-console.log(same1([1, 2, 3], [4, 1, 9]));
-console.log(same1([1, 2, 3, 2, 5], [9, 1, 4, 4, 11]));
+console.log(same2([1, 2, 3], [4, 1, 9]));
+console.log(same2([1, 2, 3, 2, 5], [9, 1, 4, 4, 11]));
