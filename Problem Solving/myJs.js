@@ -85,3 +85,31 @@ function same2(arr1, arr2) {
 
 console.log(same2([1, 2, 3], [4, 1, 9]));
 console.log(same2([1, 2, 3, 2, 5], [9, 1, 4, 4, 11]));
+
+// anagram challenge
+const validAnagram = (str1, str2) => {
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  let frequencyCounter1 = {};
+  let frequencyCounter2 = {};
+  for (let char of str1) {
+    frequencyCounter1[char] = (frequencyCounter1[char] || 0) + 1;
+  }
+  for (let char of str2) {
+    frequencyCounter2[char] = (frequencyCounter2[char] || 0) + 1;
+  }
+  for (let key in frequencyCounter1) {
+    if (!(key in frequencyCounter2)) {
+      return false;
+    }
+    if (frequencyCounter2[key] !== frequencyCounter1[key]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+console.log(validAnagram(' ', ' '));
+console.log(validAnagram('aaz', 'zza'));
+console.log(validAnagram('anagram', 'nagaram'));
