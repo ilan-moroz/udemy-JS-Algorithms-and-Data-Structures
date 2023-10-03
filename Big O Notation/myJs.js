@@ -23,7 +23,7 @@ addUpTo2(1000000000);
 var time2 = performance.now();
 console.log(`Time Elapsed: ${(time2 - time1) / 1000} seconds.`);
 
-// nested loops ---- O(n*2)
+// nested loops ----  O(n**2)
 const printAllPairs = n => {
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {

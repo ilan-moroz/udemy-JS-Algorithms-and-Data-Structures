@@ -41,6 +41,7 @@ const countChar2 = str => {
 console.log(countChar2('a    baAAAAb'));
 
 // ! frequency counter
+// O(n**2)
 const same = (arr1, arr2) => {
   if (arr1.length !== arr2.length) {
     return false;
@@ -58,6 +59,7 @@ const same = (arr1, arr2) => {
 console.log(same([1, 2, 3], [4, 1, 9]));
 console.log(same([1, 2, 3, 2, 5], [9, 1, 4, 4, 11]));
 
+// O(n)
 function same1(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
