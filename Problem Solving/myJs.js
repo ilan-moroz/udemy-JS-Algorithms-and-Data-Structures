@@ -22,14 +22,14 @@ const countChar = str => {
   const count = {};
   for (let i = 0; i < str.length; i++) {
     const lowerCase = str[i].toLowerCase();
-    if (lowerCase !== ' ')
+    if (/[a-z0-9]/.test(lowerCase))
       if (count[lowerCase]) count[lowerCase]++;
       else count[lowerCase] = 1;
   }
   return count;
 };
 
-console.log(countChar('my phone number is 2222'));
+console.log(countChar('my phone number!!!! is 2222'));
 
 const countChar2 = str => {
   return str.split('').reduce((acc, char) => {
