@@ -3,6 +3,7 @@
 // * explore concrete examples
 // * break it down
 // * solve/simplify
+// * Look Back and Refactor
 
 //! Understand the problem
 //* 1.Can i restate the problem in my own words
@@ -10,6 +11,12 @@
 //* 3.what are the outputs that should come from the solution to the problem
 //* 4.can the outputs be determined from the inputs(do i have enough info to solve the problem)?
 //* 5.how to should i label the important pieces of data that are a part the problem
+
+// ! simplify
+//* Find the core difficulty in what you're trying to do
+//* Temporarily ignore that difficulty
+//* Write a simplified solution
+//* Then incorporate that difficulty back in
 
 const countChar = str => {
   const count = {};
