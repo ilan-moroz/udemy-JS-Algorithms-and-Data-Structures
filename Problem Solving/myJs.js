@@ -23,7 +23,7 @@ const countChar = str => {
   for (let i = 0; i < str.length; i++) {
     const lowerCase = str[i].toLowerCase();
     if (lowerCase !== ' ')
-      if (count[lowerCase]) count[lowerCase] += 1;
+      if (count[lowerCase]) count[lowerCase]++;
       else count[lowerCase] = 1;
   }
   return count;
