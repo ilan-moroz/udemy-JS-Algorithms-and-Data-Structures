@@ -40,7 +40,7 @@ const countChar2 = str => {
 
 console.log(countChar2('a    baAAAAb'));
 
-// ! frequency counter
+// ! frequency counter pattern
 // O(n**2)
 const same = (arr1, arr2) => {
   if (arr1.length !== arr2.length) {
@@ -106,3 +106,5 @@ const validAnagram = (str1, str2) => {
 console.log(validAnagram(' ', ' '));
 console.log(validAnagram('aaz', 'zza'));
 console.log(validAnagram('anagram', 'nagaram'));
+
+// ! multiple pointers pattern
