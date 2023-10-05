@@ -156,3 +156,25 @@ const countUniqueValues = arr => {
 console.log(countUniqueValues([1, 1, 1, 1, 1, 2]));
 console.log(countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]));
 console.log(countUniqueValues([]));
+
+// ! sliding window pattern
+// O (n**2)
+function maxSubarraySum(arr, num) {
+  if (num > arr.length) {
+    return null;
+  }
+  let max = -Infinity;
+  for (let i = 0; i < arr.length - num + 1; i++) {
+    let temp = 0;
+    for (let j = 0; j < num; j++) {
+      temp += arr[i + j];
+    }
+    if (temp > max) {
+      max = temp;
+    }
+  }
+  return max;
+}
+
+console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2));
+console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4));
