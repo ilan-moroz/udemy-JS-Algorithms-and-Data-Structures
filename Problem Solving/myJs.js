@@ -137,3 +137,21 @@ const sumZero2 = arr => {
 console.log(sumZero2([-3, -2, -1, 0, 1, 2, 3]));
 console.log(sumZero2([-2, 0, 1, 3]));
 console.log(sumZero2([-2, -1, 2, 3]));
+
+// O(n)
+const countUniqueValues = arr => {
+  if (arr.length === 0) return 0;
+  let first = 0;
+  let second = 1;
+  while (second < arr.length) {
+    if (arr[first] === arr[second]) second++;
+    else {
+      first++;
+      arr[first] = arr[second];
+    }
+  }
+  return first + 1;
+};
+
+console.log(countUniqueValues([1, 1, 1, 1, 1, 2]));
+console.log(countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]));
