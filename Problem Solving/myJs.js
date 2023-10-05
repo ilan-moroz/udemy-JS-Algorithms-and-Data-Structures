@@ -122,7 +122,7 @@ console.log(sumZero([-3, -2, -1, 0, 1, 2, 3]));
 console.log(sumZero([-2, 0, 1, 3]));
 console.log(sumZero([-1, -2, 2, 3]));
 
-// O9(n)
+// O(n)
 const sumZero2 = arr => {
   let left = 0;
   let right = arr.length - 1;
