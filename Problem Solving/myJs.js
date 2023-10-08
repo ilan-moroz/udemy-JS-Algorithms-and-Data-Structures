@@ -107,6 +107,28 @@ console.log(validAnagram(' ', ' '));
 console.log(validAnagram('aaz', 'zza'));
 console.log(validAnagram('anagram', 'nagaram'));
 
+// challenge 1
+const sameFrequency = (num1, num2) => {
+  const stringNum1 = num1.toString();
+  const stringNum2 = num2.toString();
+  if (stringNum1.length !== stringNum2.length) return false;
+
+  let frequencyCounter = {};
+
+  for (let num of stringNum1) {
+    frequencyCounter[num] = (frequencyCounter[num] || 0) + 1;
+  }
+
+  for (let num of stringNum2) {
+    if (!frequencyCounter[num]) return false;
+    else frequencyCounter[num] -= 1;
+  }
+  return true;
+};
+
+console.log(sameFrequency(182, 281));
+console.log(sameFrequency(34, 14));
+
 // ! multiple pointers pattern
 
 // O(n**2)
